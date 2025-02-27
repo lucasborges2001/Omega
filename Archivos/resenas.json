@@ -1,0 +1,284 @@
+[
+  {
+    "nombre": "Angeles Sapriza",
+    "estrellas": 5,
+    "fecha": "una semana atrás",
+    "comentario": "Excelente taller. Serios y muy profesionales. Me siento muy segura de dejarles el auto en sus manos.\nMuy recomendable."
+  },
+  {
+    "nombre": "Dahyana Lion",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente he llevado varias veces el auto. Profesionales con seriedad, responsabilidad y muy buena atención. Excelente servicio"
+  },
+  {
+    "nombre": "Anali Oronoz de Britto",
+    "estrellas": 5,
+    "fecha": "2 semanas atrás",
+    "comentario": "Hace muchos años mi auto es cuidado por este equipo de profesionales y siempre he recomendado a muchos amigos que hoy tb llevan su auto ahí! Seriedad y conocimiento el en el área, lo avalan sus años de trayectoria. Y además nunca  mejor dicho “atendido por sus propios dueños”. No dejen de ir al taller!!!"
+  },
+  {
+    "nombre": "Diana Blanco",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente atención! Muy responsables y profesionales. Llevo mi auto hace varios años con ellos por su empatía, siempre buscando soluciones!!"
+  },
+  {
+    "nombre": "Marcelo Borges",
+    "estrellas": 5,
+    "fecha": "una semana atrás",
+    "comentario": "Sin lugar a dudas el valor agregado que tiene taller omega es su calidad de los trabajaos y confianza que generan en nosotros los clientes .\nNi hablar de la calidad humana y la seriedad en el trabajo .\nX eso seguimos trabajando siempre con el mejor taller mecánico de Mdeo"
+  },
+  {
+    "nombre": "Andres Cauduro",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente servicio, gente seria y responsable. El trato con los clientes y la calidad humana fuera de serie. 100 % recomendables."
+  },
+  {
+    "nombre": "Sebastián Llagueiro",
+    "estrellas": 5,
+    "fecha": "una semana atrás",
+    "comentario": "Excelente equipo de profesionales\nCon tecnología de vanguardia para el servicio del automóvil\nPara destacar el buen trato"
+  },
+  {
+    "nombre": "Martín Favaro",
+    "estrellas": 5,
+    "fecha": "una semana atrás",
+    "comentario": "Excelente servicio, eficiente, rápido, confiable. Muy recomendable."
+  },
+  {
+    "nombre": "Gabriela Leiva",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Muy buena atención y muy responsable. Siempre buscaron la mejor solución para nuestro auto. Muy conformes estamos"
+  },
+  {
+    "nombre": "Mabel Areosa",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Muy buena atención en lo referente al vehículo que cumplen con lo estipulado y en el tiempo previsto y la atención de dueños y personal muy humana y técnica. Muy recomendable y en excelente ubicación!!"
+  },
+  {
+    "nombre": "adan barboza",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente atención y profesionalismo y seriedad  y puntuales en los trabajos"
+  },
+  {
+    "nombre": "Alfredo Perez",
+    "estrellas": 5,
+    "fecha": "una semana atrás",
+    "comentario": "Excelente atencion y calidad en el trabajo"
+  },
+  {
+    "nombre": "Mariana Ibarra rodriguez",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente servicio, responsables , serios . Recomiendo"
+  },
+  {
+    "nombre": "Mª Fernanda Angulo",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente atención de todo el personal.\nLlevo mi coche desde hace tiempo.\nMuy conforme."
+  },
+  {
+    "nombre": "Uniformes del Prado",
+    "estrellas": 5,
+    "fecha": "Hace 2 meses",
+    "comentario": "La verdad espectacular!!! Más que recomendable.. EXCELENTE trabajo. Volveremos pronto."
+  },
+  {
+    "nombre": "Fernando D'Antuoni",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente atención y servicio de calidad... lo recomiendo!!!!"
+  },
+  {
+    "nombre": "Myriam Pazos",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Excelente atención. Profesionales de primera. Es el taller de todos los coches de la familia"
+  },
+  {
+    "nombre": "Nartia Minini",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "El mejor taller de Mvdeo! La atención espectacular, agenda rápida y excelente servicio!"
+  },
+  {
+    "nombre": "Wladimiro Karpiuk",
+    "estrellas": 5,
+    "fecha": "2 semanas atrás",
+    "comentario": "Excelente servicio y atención."
+  },
+  {
+    "nombre": "Federico Fagundez",
+    "estrellas": 5,
+    "fecha": "Hace un mes",
+    "comentario": "Excelente atención y muy responsables"
+  },
+  {
+    "nombre": "Alejandro Henon",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Muy profesionales, excelente atención!"
+  },
+  {
+    "nombre": "carolina gorgal",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Hace 12 años que somos clientes, un lujo en todo sentido, un taller responsable."
+  },
+  {
+    "nombre": "Claudia Carrera",
+    "estrellas": 4,
+    "fecha": "2 semanas atrás",
+    "comentario": "Recomendables 110%, la atención humana y técnica excelentes."
+  },
+  {
+    "nombre": "Daniel Pintos",
+    "estrellas": 5,
+    "fecha": "Hace un año",
+    "comentario": "Lo recomiendo excelente atención y dedicación, son muy responsables"
+  },
+  {
+    "nombre": "Alicia Cazard",
+    "estrellas": 5,
+    "fecha": "3 semanas atrás",
+    "comentario": "Conforme con la atención y repuesta rápida!"
+  },
+  {
+    "nombre": "Harry Umpierrez",
+    "estrellas": 5,
+    "fecha": "2 semanas atrás",
+    "comentario": "Rápidos, efectivos y buena atención!!!!!"
+  },
+  {
+    "nombre": "Musicauy DNL",
+    "estrellas": 5,
+    "fecha": "Hace 9 meses",
+    "comentario": "Exelente atención y servicio,uy amables y exelente trabajo en mi coche ,altamente recomendable 👍…"
+  },
+  {
+    "nombre": "Rodolfo Martín Irigoyen",
+    "estrellas": 5,
+    "fecha": "2 semanas atrás",
+    "comentario": "Excelente servicio"
+  },
+  {
+    "nombre": "Ricardo Martinez",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "muy buena atención siempre procurando darte un mejor servicio....... de recomendar"
+  },
+  {
+    "nombre": "Pablo Bertiz",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "Excelente servicio, muy profesionales."
+  },
+  {
+    "nombre": "Uruguaykids",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "Excelente atención, confianza absoluta"
+  },
+  {
+    "nombre": "Martin Pereyra",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "Excelente atención, compromiso con el cliente y servicio. Una garantía."
+  },
+  {
+    "nombre": "Wasp pic",
+    "estrellas": 5,
+    "fecha": "Hace un año",
+    "comentario": "La.mejpr opción ...en cualquier cosa que le suceda al auto ..tiene una salida siempre rápidos y seguro ...éxitos!"
+  },
+  {
+    "nombre": "rossana gorgal pelloni",
+    "estrellas": 5,
+    "fecha": "Hace 4 años",
+    "comentario": "Excelente servicio, muy responsables."
+  },
+  {
+    "nombre": "Alejandro Chao",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "excelente atención y rapidez que era lo que necesitaba"
+  },
+  {
+    "nombre": "Daniel Camperchioli",
+    "estrellas": 4,
+    "fecha": "Hace un año",
+    "comentario": "Muy buen servicio!!"
+  },
+  {
+    "nombre": "Damiàn Babìo",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "Servicio impecable\nSerios y responsables"
+  },
+  {
+    "nombre": "Melisa A.",
+    "estrellas": 5,
+    "fecha": "Hace un año",
+    "comentario": "Buen servicio 👍…"
+  },
+  {
+    "nombre": "rosina somma",
+    "estrellas": 5,
+    "fecha": "Hace 2 años",
+    "comentario": "Siempre me solucionan los desperfectos del auto. Son responsables."
+  },
+  {
+    "nombre": "Paola Pozzolo",
+    "estrellas": 5,
+    "fecha": "Hace 11 meses",
+    "comentario": "Excelente servicio"
+  },
+  {
+    "nombre": "Alvaro Marega - Cervieri",
+    "estrellas": 4,
+    "fecha": "Hace 4 años",
+    "comentario": "Uno de los mejores talleres de General Motors ( no se deje engañar )"
+  },
+  {
+    "nombre": "Rosario Milans",
+    "estrellas": 5,
+    "fecha": "Hace 5 años",
+    "comentario": "Son muy amables y eficaces ."
+  },
+  {
+    "nombre": "maria elena",
+    "estrellas": 5,
+    "fecha": "Hace 4 años",
+    "comentario": "Impecable el servicio"
+  },
+  {
+    "nombre": "Paula C",
+    "estrellas": 5,
+    "fecha": "Hace 3 años",
+    "comentario": "Excelente, recomiendo"
+  },
+  {
+    "nombre": "Julio C. Alvarez",
+    "estrellas": 1,
+    "fecha": "Hace un año",
+    "comentario": "Desastroso."
+  },
+  {
+    "nombre": "Fabrice Desmullier Irrazabal",
+    "estrellas": 5,
+    "fecha": "Hace 5 años",
+    "comentario": "Capos"
+  },
+  {
+    "nombre": "Fabricio Cavalcante",
+    "estrellas": 5,
+    "fecha": "Hace un año",
+    "comentario": "rodolfo es el momento"
+  }
+]

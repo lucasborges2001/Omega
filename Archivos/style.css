@@ -1,0 +1,1355 @@
+/* ============================== */
+/*        VARIABLES GLOBALES      */
+/* ============================== */
+:root {
+    /* Fuentes */
+    --fuenteHeading: 'Roboto', sans-serif;
+    --fuenteParrafos: "Poppins", sans-serif;
+
+    /* Colores */
+    --grisOscuro: #4A4A4A;                          /* Fondo Contenido */
+    --blanco: #FFFFFF;                              /* Letra */
+    --negro: #000000;                               /* Fondo */
+    --secundario: #EC3542;                          /* Enlaces */
+    --rojo: #FA1111;                                /* Botones y detalles */
+    --grisClaro: #F8F9FA;                           /* Fondo header y footer */
+    --grisMedio: #888;                              /* Texto footer */
+    --rojoTransparente: rgba(236, 53, 66, 0.5);     /* Íconos */
+    --rojoOpaco: rgba(250, 17, 17, 0.8);
+    --grisPerfil: #808080;                          /* Fondo perfil reseñas */
+}
+
+/* ============================== */
+/*        ESTILOS GLOBALES        */
+/* ============================== */
+html {
+    box-sizing: border-box; /* Modelo de caja consistente */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* Hereda border-box a todos los elementos */
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    line-height: 1.4;
+    color: var(--blanco);
+}
+
+/* ============================== */
+/*        TIPOGRAFÍA              */
+/* ============================== */
+h1, h2, h3 {
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+}
+
+h1 {
+    font-size: 5vh;
+    margin-bottom: 1vh;
+}
+
+h2 {
+    font-size: 4vh;
+    margin-bottom: 1vh;
+}
+
+h3 {
+    font-size: 3vh;
+    margin-bottom: 1vh;
+}
+
+p {
+    font-family: var(--fuenteParrafos);
+    font-size: 2.2vh;
+    margin-bottom: 1vh;
+    color: var(--blanco);
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4.5vh;
+    }
+    
+    h2 {
+        font-size: 3.5vh;
+    }
+    
+    h3 {
+        font-size: 2.5vh;
+    }
+}
+
+/* ============================== */
+/*        BOTONES                 */
+/* ============================== */
+.index-page .boton2 {
+    background-color: transparent;
+    color: var(--blanco);
+    border: 0.2vh solid var(--blanco);
+    margin-top: 3vh;
+    display: inline-block;
+    padding: 2.5vh 3vw;
+    border-radius: 50px;
+    align-self: flex-start;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton {
+    margin-top: 3vh;
+    margin-right: 2vw;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 2.5vh 3vw;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover en botones */
+.boton:hover {
+    background-color: var(--blanco);
+    color: var(--rojo);
+}
+
+/* ============================== */
+/*        NAVEGACIÓN              */
+/* ============================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--grisClaro);
+    z-index: 1000;
+    box-shadow: 0 0.2vh 1vh rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 5vw;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container img {
+    height: 8vh;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3vh;
+    color: var(--negro);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3vw;
+}
+
+nav ul li a {
+    font-size: 2.2vh;
+    color: var(--negro);
+    text-decoration: none;
+    padding: 1vh 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    border-bottom: 0.2vh solid var(--secundario);
+    color: var(--secundario);
+}
+
+/* ============================== */
+/*        NAVEGACIÓN RESPONSIVA   */
+/* ============================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: var(--grisClaro);
+        box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
+        gap: 0;
+        z-index: 1001;
+    }
+
+    .nav-container img {
+        height: 6vh;
+    }
+
+    nav ul.menu-open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 2vh 0;
+        font-size: 2.5vh;
+    }
+}
+
+/* ============================== */
+/*        FOOTER                  */
+/* ============================== */
+footer {
+    text-align: center;
+    padding: 5vh 0;
+}
+
+footer img {
+    height: 10vh;
+    cursor: pointer;
+}
+
+footer p {
+    margin: 5vh 0 0;
+    color: var(--grisOscuro);
+}
+
+/* ============================== */
+/*        ÍCONOS                  */
+/* ============================== */
+.icon-wrapper {
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: var(--rojoTransparente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vh;
+}
+
+.icon-wrapper svg {
+    width: 4vh;
+    height: 4vh;
+    fill: var(--blanco);
+}
+
+/* ============================== */
+/*        ENLACES GENERALES       */
+/* ============================== */
+a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+/* ============================== */
+/*        RESEÑAS                 */
+/* ============================== */
+.resenas {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 10vh 5vw;
+    text-align: center;
+}
+
+/* ============================== */
+/*        CARRUSEL                */
+/* ============================== */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#resenas-container {
+    display: flex;
+    overflow: hidden;
+    margin: 5vh 0;
+    gap: 2vw;
+}
+
+/* ============================== */
+/*        RESEÑA INDIVIDUAL       */
+/* ============================== */
+.resena {
+    background-color: var(--grisOscuro);
+    padding: 4vh;
+    border-radius: 1vw;
+    width: 40vw;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+}
+
+/* ============================== */
+/*        ESTRELLAS Y PERFIL      */
+/* ============================== */
+.estrellas {
+    color: var(--rojo);
+    text-align: left;
+}
+
+.imagen-perfil {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: var(--grisPerfil);
+    margin-right: 1vw;
+    vertical-align: middle;
+}
+
+/* ============================== */
+/*        COMENTARIO Y AUTOR      */
+/* ============================== */
+.comentario {
+    overflow-y: auto;
+    max-height: 25vh;
+    text-align: left;
+    margin-bottom: 1vh;
+}
+
+.nombre {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+/* ============================== */
+/*        FLECHAS DEL CARRUSEL    */
+/* ============================== */
+.arrow {
+    background: none;
+    border: none;
+    color: var(--blanco);
+    cursor: pointer;
+    padding: 1vh;
+    font-size: 2vw;
+    transition: color 0.3s;
+}
+
+.arrow:hover {
+    color: var(--rojo);
+}
+
+/* ============================== */
+/*        RESEÑAS RESPONSIVAS     */
+/* ============================== */
+@media (max-width: 1024px) {
+    .carousel {
+        margin-top: 8vh;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #resenas-container {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 2vw;
+        margin: 0;
+    }
+
+    .resena {
+        width: 48vw;
+        height: 40vw;
+        margin: 0;
+    }
+
+    .imagen-perfil {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .carousel {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #resenas-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 4vh;
+        margin: 0;
+    }
+
+    .resena {
+        width: 80vw;
+        height: 80vw;
+        margin: 0 auto;
+    }
+
+    .imagen-perfil {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+/* ============================== */
+/*       CONTACT SECTION          */
+/* ============================== */
+.container-contacto {
+    color: var(--blanco);
+    background-color: var(--negro);
+    padding: 10vh 5vw;
+    display: flex;
+}
+
+/* Contenedor de la información de contacto */
+#Contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================== */
+/*        TEXT STYLES             */
+/* ============================== */
+.container-contacto h3 {
+    margin-bottom: 3vh;
+}
+
+.container-contacto p {
+    margin-bottom: 3vh;
+}
+
+/* ============================== */
+/*    CONTACT INFO ANIMATION      */
+/* ============================== */
+.contenido_contacto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vh;
+    opacity: 0;
+    transform: translateX(-2vw);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out; /* Modificación 3: 0.7s */
+}
+
+.contenido_contacto.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================== */
+/*       MAP STYLES               */
+/* ============================== */
+#mapa {
+    flex: 1;
+    height: clamp(40vh, 65vh, 80vh); /* Modificación 1: clamp para altura */
+}
+
+#mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ============================== */
+/*    RESPONSIVE DESIGN (TABLETS) */
+/* ============================== */
+@media (max-width: 1024px) {
+    .container-contacto {
+        flex-direction: column;
+        padding: 5vw;
+    }
+
+    #Contacto {
+        order: 1;
+        margin-bottom: 1.5vh;
+        width: 100%;
+    }
+
+    #mapa {
+        order: 2;
+        height: 50vh;
+        flex: none;
+    }
+}
+
+/* ============================== */
+/*    RESPONSIVE DESIGN (MÓVILES) */
+/* ============================== */
+@media (max-width: 425px) {
+    .container-contacto {
+        padding: 5vh 5vw; /* Modificación 2: padding vertical en vh */
+    }
+
+    #mapa {
+        height: 35vh;
+    }
+}
+
+/* ============================== */
+/*        INDEX PAGE STYLES       */
+/* ============================== */
+
+/* ============================== */
+/*        HERO SECTION            */
+/* ============================== */
+.index-page .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/inicio01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido dentro del hero */
+.index-page .contenido-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5vh;
+    color: var(--blanco);
+    text-align: center;
+}
+
+/* ============================== */
+/*       HERO BUTTONS             */
+/* ============================== */
+.index-page .botones {
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================== */
+/*       WHY CHOOSE US SECTION    */
+/* ============================== */
+.index-page .elegirnos {
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5.25vh 0 6.25vh 6.25vw;
+    overflow: hidden;
+}
+
+/* Contenedor de texto */
+.index-page .text-content {
+    padding-right: 7vw;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    flex: 1;
+}
+
+/* Contenedor de la imagen */
+.index-page .elegirnos .image-content {
+    flex: 0 0 55vw;
+    overflow: hidden;
+}
+
+/* Imagen dentro de la sección */
+.index-page .elegirnos .image-content .imagen {
+    width: 100%;
+    height: auto;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estado final cuando está animado */
+.index-page .elegirnos .image-content .imagen.animated {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Ajustes para pantallas menores o iguales a 1024px */
+@media (max-width: 1024px) {
+    .index-page .elegirnos {
+        flex-direction: column;
+    }
+
+    .index-page .text-content {
+        text-align: center;
+    }
+
+    .index-page .boton2 {
+        margin: 2vh auto;
+    }
+
+    .index-page .elegirnos .image-content {
+        order: -1;
+        text-align: center;
+        margin-bottom: 3vh;
+        flex: 0 0 auto;
+        width: 80vw;
+    }
+
+    .index-page .elegirnos .image-content .imagen {
+        width: 100%;
+        transform: translateY(50px);
+    }
+
+    .index-page .elegirnos .image-content .imagen.animated {
+        transform: translateY(0);
+    }
+}
+
+/* ============================== */
+/*      FEATURED SERVICES SECTION */
+/* ============================== */
+.index-page .servicios {
+    text-align: center;
+    padding: 4vh 0;
+}
+
+/* Sección destacada de servicios con efecto hero */
+.index-page .servicios.index-hero {
+    position: relative;
+}
+
+/* Imagen de fondo de la sección de servicios */
+.index-page .servicios.index-hero::before {
+    content: '';
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/servicios01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Contenido de la sección de servicios */
+.index-page .servicios-content {
+    max-width: 95vw;
+    margin: 0 auto;
+    color: var(--blanco);
+    padding: 2vh 5vw;
+}
+
+/* Estilo del título */
+.index-page .servicios h3 {
+    margin-bottom: 3.5vh;
+}
+
+/* Párrafo en la sección de servicios */
+.index-page .servicios-content p {
+    margin-bottom: 8.5vh;
+}
+
+/* Contenedor de logos */
+.index-page .logos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
+
+/* Elemento individual de logo */
+.index-page .logo-item {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Texto debajo de cada logo */
+.index-page .logo-item p {
+    font-weight: bold;
+}
+
+/* Círculo contenedor de los logos */
+.index-page .circle-logo {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: var(--rojoOpaco); /* Usando nueva variable */
+    box-shadow: inset 0 0 1vw rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+
+/* Ajuste del tamaño de las imágenes dentro del círculo */
+.index-page .circle-logo img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+/* Responsive para servicios */
+@media (max-width: 1024px) {
+    .index-page .circle-logo {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .index-page .logos-container {
+        flex-wrap: wrap;
+    }
+
+    .index-page .logo-item {
+        flex: 1 1 calc(50% - 1vh);
+    }
+}
+
+@media (max-width: 425px) {
+    .index-page .circle-logo {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .index-page .logo-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* ============================== */
+/*        SERVICIOS PAGE STYLES   */
+/* ============================== */
+
+/* ============================== */
+/*        HERO SECTION            */
+/* ============================== */
+.servicios-page .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/servicios01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.servicios-page .hero .contenido-hero {
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+    text-align: left;
+    color: var(--blanco); /* Usando variable */
+}
+
+.servicios-page .hero .contenido-hero h1 {
+    margin-bottom: 0.5vh;
+}
+
+.servicios-page .hero .contenido-hero p {
+    margin-bottom: 3vh;
+}
+
+/* ============================== */
+/*        SERVICIOS SECTION       */
+/* ============================== */
+.servicios-page .servicios {
+    text-align: center;
+    padding: 10vh 4vw;
+    background-color: var(--negro); /* Usando variable */
+}
+
+/* Contenido de la sección de servicios */
+.servicios-page .servicios-content {
+    color: var(--blanco); /* Usando variable */
+}
+
+/* Estilo del título */
+.servicios-page .servicios h3 {
+    margin-bottom: 3.5vh;
+}
+
+/* Párrafo en la sección de servicios */
+.servicios-page .servicios-content p {
+    margin-bottom: 8.5vh;
+}
+
+/* Contenedor de logos */
+.servicios-page .logos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
+
+/* Elemento individual de logo */
+.servicios-page .logo-item {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Texto debajo de cada logo */
+.servicios-page .logo-item p {
+    font-weight: bold;
+}
+
+/* Círculo contenedor de los logos */
+.servicios-page .circle-logo {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: var(--rojoOpaco); /* Usando variable existente */
+    box-shadow: inset 0 0 1vw rgba(0, 0, 0, 0.3); /* Ajustado a vw */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+
+/* Ajuste del tamaño de las imágenes dentro del círculo */
+.servicios-page .circle-logo img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+/* Responsive para servicios */
+@media (max-width: 1024px) {
+    .servicios-page .circle-logo {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .servicios-page .logos-container {
+        flex-wrap: wrap;
+    }
+
+    .servicios-page .logo-item {
+        flex: 1 1 calc(50% - 1vh);
+    }
+}
+
+@media (max-width: 425px) {
+    .servicios-page .circle-logo {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .servicios-page .logo-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* ============================== */
+/*      SERVICIOS DESTACADOS      */
+/* ============================== */
+.servicios-page .servicios-featured {
+    position: relative;
+    overflow: hidden;
+}
+
+.servicios-page .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.servicios-page .info-box {
+    background-color: var(--negro); /* Usando variable */
+    color: var(--blanco); /* Usando variable */
+    position: absolute;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    z-index: 1;
+    width: calc(100% - 50vw);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.servicios-page .info-box.left-aligned {
+    left: 5vw;
+    transform: translateX(-100%);
+}
+
+.servicios-page .info-box.right-aligned {
+    right: 5vw;
+    transform: translateX(100%);
+}
+
+/* Posiciones específicas de las cajas de información */
+.servicios-page .info-box1 { top: 17%; }
+.servicios-page .info-box2 { top: 25%; }
+.servicios-page .info-box3 { top: 69%; }
+.servicios-page .info-box4 { top: 77%; }
+
+/* Espacios en blanco entre secciones */
+.servicios-page .white-space1 {
+    height: 50vh;
+    background-color: var(--blanco); /* Usando variable */
+}
+
+.servicios-page .white-space2 {
+    height: 13.5vh;
+    background-color: var(--blanco); /* Usando variable */
+}
+
+.servicios-page .white-space3 {
+    height: 50vh;
+    background-color: var(--blanco); /* Usando variable */
+}
+
+/* Media Queries para responsive design */
+@media (max-width: 1024px) {
+    .servicios-page .info-box {
+        width: calc(100% - 40vw);
+    }
+    .servicios-page .info-box1 { top: 15%; }
+    .servicios-page .info-box2 { top: 27%; }
+    .servicios-page .white-space1,
+    .servicios-page .white-space3 {
+        height: 50vh;
+    }
+    .servicios-page .info-box3 { top: 65%; }
+    .servicios-page .info-box4 { top: 78%; }
+}
+
+@media (max-width: 768px) {
+    .servicios-page .servicios-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicios-page .info-box {
+        position: static;
+        width: 66.66%;
+        margin: 3vh auto 0;
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    .servicios-page .info-box.left-aligned,
+    .servicios-page .info-box.right-aligned {
+        left: auto;
+        right: auto;
+    }
+
+    /* Reordenamos los elementos con 'order' */
+    .servicios-page .featured-image1 { order: 1; }
+    .servicios-page .info-box1 { order: 2; }
+    .servicios-page .white-space1 { order: 3; }
+    .servicios-page .featured-image2 { order: 4; }
+    .servicios-page .info-box2 { order: 5; }
+    .servicios-page .white-space2 { order: 6; }
+    .servicios-page .featured-image3 { order: 7; }
+    .servicios-page .info-box3 { order: 8; }
+    .servicios-page .white-space3 { order: 9; }
+    .servicios-page .featured-image4 { order: 10; }
+    .servicios-page .info-box4 { order: 11; }
+    .servicios-page .white-space4 { order: 12; }
+
+    /* Tamaño uniforme para todos los white-space */
+    .servicios-page .white-space1,
+    .servicios-page .white-space3,
+    .servicios-page .white-space4 {
+        height: 15vh;
+        background-color: var(--blanco);
+    }
+
+    .servicios-page .info-box {
+        margin-top: -10vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .servicios-page .info-box {
+        width: 90%;
+        margin-top: -10vh;
+    }
+}
+
+/* ============================== */
+/*     SOBRE NOSOTROS PAGE        */
+/* ============================== */
+
+/* ============================== */
+/*          HERO SECTION          */
+/* ============================== */
+.sobre-nosotros-page .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/nosotros01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.sobre-nosotros-page .hero .contenido-hero {
+    position: absolute;
+    top: 55vh;
+    left: 5vw;
+    text-align: left;
+    color: var(--blanco);
+}
+
+.sobre-nosotros-page .hero .contenido-hero h1 {
+    margin-bottom: 0.5vh;
+}
+
+.sobre-nosotros-page .hero .contenido-hero p {
+    margin-bottom: 3vh;
+}
+
+/* ============================== */
+/*        ESTADÍSTICAS            */
+/* ============================== */
+.sobre-nosotros-page .estadisticas {
+    background-color: var(--negro);
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.sobre-nosotros-page .circulo {
+    width: 21vw;
+    height: 21vw;
+    border-radius: 50%;
+    background-color: var(--rojoTransparente); /* Cambio 2: rojo transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.sobre-nosotros-page .circulo h2 {
+    margin: 0;
+}
+
+.sobre-nosotros-page .circulo h3 {
+    margin: 1vh 0 0;
+}
+
+/* Responsive para estadísticas */
+@media (max-width: 1024px) {
+    .sobre-nosotros-page .estadisticas {
+        height: 60vh;
+    }
+
+    .sobre-nosotros-page .circulo {
+        width: 22vw;
+        height: 22vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros-page .estadisticas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sobre-nosotros-page .circulo {
+        width: 45vw;
+        height: 45vw;
+        margin: 5vh 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .sobre-nosotros-page .circulo {
+        width: 62vw;
+        height: 62vw;
+    }
+}
+
+/* ============================== */
+/*      SOBRE NOSOTROS FEATURED   */
+/* ============================== */
+.sobre-nosotros-page .sobre-nosotros-featured {
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre-nosotros-page .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sobre-nosotros-page .sobre-nosotros-featured .info-box {
+    background-color: var(--negro);
+    color: var(--blanco);
+    position: absolute;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    z-index: 1;
+    width: calc(100% - 55vw);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.sobre-nosotros-page .sobre-nosotros-featured .info-box.right-aligned {
+    right: 5.5vw;
+    bottom: 15.5vh;
+}
+
+/* Espacio en blanco entre secciones */
+.sobre-nosotros-page .sobre-nosotros-featured .white-space {
+    height: 45vh;
+    background-color: var(--blanco);
+}
+
+/* Responsive para featured */
+@media (max-width: 1024px) {
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box {
+        width: calc(100% - 45vw);
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .white-space {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros-page .sobre-nosotros-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box {
+        position: static;
+        width: 66.66%;
+        margin: 3vh auto 0;
+        order: 2;
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box.right-aligned {
+        right: auto;
+        bottom: auto;
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .white-space {
+        height: 25vh;
+        order: 3;
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box {
+        margin-top: -20vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box {
+        width: 90%;
+        margin-top: -10vh;
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    .sobre-nosotros-page .sobre-nosotros-featured .white-space {
+        height: 10vh;
+    }
+}
+
+/* ============================== */
+/*      NOSOTROS CONTAINER        */
+/* ============================== */
+.sobre-nosotros-page .nosotros-container {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 4vh 5vw;
+}
+
+.sobre-nosotros-page .nosotros-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sobre-nosotros-page .text-box {
+    flex-basis: calc(33.333% - 3vw);
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.sobre-nosotros-page .icon-wrapper {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 1vw;
+    margin-top: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.sobre-nosotros-page .icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--blanco);
+}
+
+.sobre-nosotros-page .text-content {
+    flex: 1;
+}
+
+/* Responsive para nosotros-container */
+@media (max-width: 1024px) {
+    .sobre-nosotros-page .nosotros-content {
+        justify-content: space-around;
+    }
+
+    .sobre-nosotros-page .text-box {
+        flex-basis: calc(50% - 2vw);
+        margin-bottom: 4vh;
+    }
+
+    .sobre-nosotros-page .icon-wrapper {
+        margin-top: 3.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros-page .nosotros-content {
+        justify-content: center;
+    }
+
+    .sobre-nosotros-page .text-box {
+        flex-basis: 100%;
+        margin-bottom: 3vh;
+    }
+
+    .sobre-nosotros-page .icon-wrapper {
+        margin-top: 7.5vw;
+    }
+}
+
+/* ============================== */
+/*       CONTACT PAGE STYLES      */
+/* ============================== */
+
+/* ============================== */
+/*        HERO SECTION            */
+/* ============================== */
+.contacto-page .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./img/contacto01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido dentro del hero */
+.contacto-page .contenido-hero {
+    position: absolute;
+    top: 45vh;
+    left: 5vw;
+    right: 5vw;
+    text-align: left;
+    color: var(--blanco); /* Usando variable */
+}
+
+/* ============================== */
+/*       CONTACT BUTTONS          */
+/* ============================== */
+.contacto-page .botones {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+body.contacto-page .hero .botones {
+    justify-content: flex-start;
+}
+
+/* Responsive para hero y botones */
+@media (min-width: 1025px) {
+    .contacto-page .contenido-hero p {
+        max-width: 50vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacto-page .contenido-hero {
+        top: 40vh;
+    }
+}
+
+@media (max-width: 780px) {
+    .contacto-page .contenido-hero {
+        top: 30vh;
+    }
+
+    .contacto-page .boton {
+        margin-bottom: 2vh;
+    }
+
+    .contacto-page .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .contacto-page .contenido-hero {
+        top: 25vh;
+    }
+
+    .contacto-page .boton {
+        margin-bottom: 2vh;
+    }
+
+    .contacto-page .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
