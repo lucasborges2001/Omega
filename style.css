@@ -11,8 +11,6 @@
     --blanco: #FFFFFF;                              /* Letra */
     --negro: #000000;                               /* Fondo */
     --rojo: #EA0000;                                /* Botones y detalles */
-    --grisClaro: #F8F9FA;                           /* Fondo header y footer */
-    --grisMedio: #888;                              /* Texto footer */
     --rojoTransparente: rgba(255, 0, 0, 0.5);     /* Íconos */
     --grisPerfil: #808080;                          /* Fondo perfil reseñas */
 }
@@ -127,7 +125,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--grisClaro);
+    background-color: var(--blanco);
     z-index: 1000;
     box-shadow: 0 0.2vh 1vh rgba(0, 0, 0, 0.1);
 }
@@ -203,7 +201,7 @@ nav ul li a.active {
         top: 10vh;
         left: 0;
         width: 100%;
-        background-color: var(--grisClaro);
+        background-color: var(--blanco);
         box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
         gap: 0;
         z-index: 1001;
