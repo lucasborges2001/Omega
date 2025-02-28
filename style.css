@@ -1410,6 +1410,10 @@ a {
     color: var(--blanco); /* Usando variable */
 }
 
+.contacto-page p {
+    padding: 1vh 0 1vh 0;
+}
+
 /* ============================== */
 /*       CONTACT BUTTONS          */
 /* ============================== */
