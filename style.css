@@ -334,7 +334,7 @@ a {
     text-align: left;
     font-size: 3vh;
     flex-shrink: 0;
-    margin: 0;
+    margin: 0 0 1vh 0;
 }
 
 .imagen-perfil {
@@ -707,6 +707,8 @@ a {
 
 /* Párrafo en la sección de servicios */
 .index-page .servicios-content p {
+    max-width: 70%;
+    margin: 0 auto;
     margin-bottom: 8.5vh;
 }
 
