@@ -10,11 +10,10 @@
     --grisOscuro: #4A4A4A;                          /* Fondo Contenido */
     --blanco: #FFFFFF;                              /* Letra */
     --negro: #000000;                               /* Fondo */
-    --secundario: #EC3542;                          /* Enlaces */
-    --rojo: #FA1111;                                /* Botones y detalles */
+    --rojo: #EA0000;                                /* Botones y detalles */
     --grisClaro: #F8F9FA;                           /* Fondo header y footer */
     --grisMedio: #888;                              /* Texto footer */
-    --rojoTransparente: rgba(236, 53, 66, 0.7);     /* Íconos */
+    --rojoTransparente: rgba(255, 0, 0, 0.5);     /* Íconos */
     --grisPerfil: #808080;                          /* Fondo perfil reseñas */
 }
 
@@ -177,8 +176,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    border-bottom: 0.2vh solid var(--secundario);
-    color: var(--secundario);
+    border-bottom: 0.2vh solid var(--rojo);
+    color: var(--rojo);
 }
 
 /* ============================== */
