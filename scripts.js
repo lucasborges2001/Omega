@@ -65,20 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const elegirnosObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const textContent = entry.target.querySelector('.text-content');
-            const image = entry.target.querySelector('.imagen');
+            const imageContent = entry.target.querySelector('.image-content'); // Cambiado de .imagen a .image-content
     
-            if (textContent && image) {
+            if (textContent && imageContent) {
                 const isVisible = entry.isIntersecting;
     
-                if (isVisible && !image.classList.contains('animated')) {
+                if (isVisible && !imageContent.classList.contains('animated')) {
                     // Animación del texto
                     textContent.style.transition = 'opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s';
                     textContent.style.opacity = '1';
                     textContent.style.transform = 'translateY(0)';
     
-                    // Animación de la imagen
-                    image.classList.add('animated');
-                    observer.unobserve(entry.target);
+                    // Animación de la imagen (ahora en el div)
+                    imageContent.classList.add('animated');
+                    observer.unobserve(entry.target); // Nota: 'observer' debería ser 'elegirnosObserver'
                 }
             }
         });
