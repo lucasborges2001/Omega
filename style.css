@@ -288,6 +288,11 @@ a {
     text-align: center;
 }
 
+.resenas-content h2 {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 /* ============================== */
 /*        CARRUSEL                */
 /* ============================== */
