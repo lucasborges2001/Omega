@@ -762,11 +762,6 @@ a {
     text-align: center;
 }
 
-/* Texto debajo de cada logo */
-/* .index-page .logo-item p {
-    font-weight: medium;
-} */
-
 /* Círculo contenedor de los logos */
 .index-page .circle-logo {
     width: 14vw;
@@ -787,17 +782,38 @@ a {
 
 /* Responsive para servicios */
 @media (max-width: 1024px) {
+    .index-page .servicios {
+        padding: 0;
+    }
+    .index-page .servicios.index-hero {
+        min-height: 80vh;
+    }
+
+    .index-page .servicios-content {
+        padding: 0;
+    }
+
+    .index-page .servicios-content p {
+        max-width: 85%;
+    }
+    
+    .index-page .servicios.index-hero::before {
+        background-size: cover; /* Mantengo cover */
+        background-position: center; /* Centrado para mejor visibilidad */
+    }
+
+    .index-page .logos-container p{
+        margin: 0;
+    }
+    
+    .index-page .logo-item{
+        margin-bottom: 5vh;;
+    }
+
     .index-page .circle-logo {
-        width: 30vw;
-        height: 30vw;
-    }
-
-    .index-page .logos-container {
-        flex-wrap: wrap;
-    }
-
-    .index-page .logo-item {
-        flex: 1 1 calc(50% - 1vh);
+        width: 18vw;
+        height: 18vw;
+        margin-bottom: 2vh;
     }
 }
 
