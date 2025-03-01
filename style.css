@@ -44,17 +44,20 @@ h1, h2, h3 {
 }
 
 h1 {
+    margin: 0;
     font-size: 6vh;
     margin-bottom: 1vh;
 }
 
 h2 {
+    margin: 0;
     font-size: 4vh;
     margin-bottom: 1vh;
     line-height: 6.8vh;
 }
 
 h3 {
+    margin: 0;
     font-size: 3vh;
     margin-bottom: 1vh;
 }
@@ -62,7 +65,7 @@ h3 {
 p {
     font-family: var(--fuenteParrafos);
     font-size: 2.2vh;
-    margin-bottom: 1vh;
+    margin: 0;
     color: var(--blanco);
     line-height: 3.8vh;
 }
@@ -84,11 +87,11 @@ p {
 /* ============================== */
 /*        BOTONES                 */
 /* ============================== */
-.index-page .boton2 {
+.boton2 {
     background-color: transparent;
     color: var(--blanco);
     border: 0.25vh solid var(--blanco);
-    margin-top: 3vh;
+    margin: 0;
     display: inline-block;
     padding: 2.5vh 3vw;
     border-radius: 50px;
@@ -96,8 +99,15 @@ p {
     transition: background-color 0.3s, color 0.3s;
 }
 
+@media screen and (max-width: 768px) {
+    .boton2 {
+        padding: 2.5vh 4.3vw;
+    }
+    
+}
+
 .boton {
-    margin-top: 3vh;
+    margin-top: 0;
     margin-right: 2vw;
     background-color: var(--rojo);
     color: var(--blanco);
@@ -548,7 +558,9 @@ a {
 /* ============================== */
 /*        HERO SECTION            */
 /* ============================== */
+
 .index-page .hero {
+    background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/inicio01.jpg');
     background-repeat: no-repeat;
     background-size: 120% auto; /* Usa el 100% del ancho y alto de la imagen */
@@ -561,26 +573,21 @@ a {
 }
 
 /* Contenido dentro del hero */
-.index-page .contenido-hero {
+.contenido-hero {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5vh;
+    top: 50vh;
+    left: 5vw;
+    text-align: left;
     color: var(--blanco);
-    text-align: center;
 }
 
-.index-page p {
-    padding: 1vh 0 1vh 0;
+.hero .contenido-hero h1 {
+    margin-bottom: 2vh;
 }
 
-/* ============================== */
-/*       HERO BUTTONS             */
-/* ============================== */
-.index-page .botones {
-    display: flex;
-    justify-content: center;
+.hero .contenido-hero p {
+    margin-bottom: 6.5vh;
+    max-width: 70vh;
 }
 
 /* ============================== */
@@ -606,6 +613,10 @@ a {
     flex: 1;
 }
 
+.index-page .text-content p {
+    margin-bottom: 5.5vh;
+}
+
 /* Imagen dentro de la sección */
 /* Contenedor de la imagen */
 .index-page .elegirnos .image-content {
@@ -629,24 +640,40 @@ a {
 
 /* Ajustes para pantallas menores o iguales a 1024px */
 @media (max-width: 1024px) {
+    .contenido-hero {
+        position: absolute;
+        top: 45vh;
+        left: 5vw;
+        text-align: left;
+        color: var(--blanco);
+    }
+
+    .contenido-hero {
+        text-align: left;
+    }
+    
     .index-page .elegirnos {
         flex-direction: column;
+        padding: 0 0 5.25vh 0;
     }
 
     .index-page .text-content {
-        text-align: center;
+        text-align: left;
+        padding: 5.25vh 6.25vh 5.25vh 6.25vh;
     }
 
-    .index-page .boton2 {
-        margin: 2vh auto;
+    .index-page .text-content p {
+        width: 70%;
+    }
+
+    .index-page .elegirnos h2{
+        margin: 0;
     }
 
     .index-page .elegirnos .image-content {
-        order: -1;
         text-align: center;
-        margin-bottom: 3vh;
         flex: 0 0 auto;
-        width: 80vw;
+        width: 100%;
         transform: translateY(50px);
         background-size: 120% auto; /* Zoom: Ancho, Alto */
         background-position: 37% 70%; /* Posición: Izquierda, Arriba */
@@ -658,6 +685,15 @@ a {
     .index-page .elegirnos .image-content.animated {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .index-page .hero {
+        background-repeat: no-repeat;
+        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
+        background-position: 0% 28%; /* Empieza desde la esquina superior izquierda */
+        height: 88vh;
     }
 }
 
@@ -795,20 +831,12 @@ a {
     align-items: center;
 }
 
-.servicios-page .hero .contenido-hero {
-    position: absolute;
-    top: 55vh;
-    left: 5vw;
-    text-align: left;
-    color: var(--blanco); /* Usando variable */
-}
-
-.servicios-page .hero .contenido-hero h1 {
-    margin-bottom: 0.5vh;
-}
-
-.servicios-page .hero .contenido-hero p {
-    margin-bottom: 3vh;
+@media (max-width: 780px) {
+    .servicios-page  .hero {
+        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
+        background-position: 0% 1%; /* Empieza desde la esquina superior izquierda */
+        height: 88vh;
+    }
 }
 
 /* ============================== */
@@ -1093,20 +1121,13 @@ a {
     align-items: center;
 }
 
-.sobre-nosotros-page .hero .contenido-hero {
-    position: absolute;
-    top: 55vh;
-    left: 5vw;
-    text-align: left;
-    color: var(--blanco);
-}
-
-.sobre-nosotros-page .hero .contenido-hero h1 {
-    margin-bottom: 0.5vh;
-}
-
-.sobre-nosotros-page .hero .contenido-hero p {
-    margin-bottom: 3vh;
+@media (max-width: 768px) {
+    .sobre-nosotros-page .hero {
+        background-repeat: no-repeat;
+        background-size: 135% auto; /* Usa el 100% del ancho y alto de la imagen */
+        background-position: 38% 100%; /* Empieza desde la esquina superior izquierda */
+        height: 88vh;
+    }
 }
 
 /* ============================== */
@@ -1397,58 +1418,11 @@ a {
     align-items: center;
 }
 
-/* Contenido dentro del hero */
-.contacto-page .contenido-hero {
-    position: absolute;
-    top: 55vh;
-    left: 5vw;
-    right: 5vw;
-    text-align: left;
-    color: var(--blanco); /* Usando variable */
-}
-
-.contacto-page p {
-    padding: 1vh 0 1vh 0;
-}
-
-/* ============================== */
-/*       CONTACT BUTTONS          */
-/* ============================== */
-.contacto-page .botones {
-    margin-top: 4vh;
-    display: flex;
-    justify-content: center;
-}
-
-body.contacto-page .hero .botones {
-    justify-content: flex-start;
-}
-
-/* Responsive para hero y botones */
-@media (min-width: 1025px) {
-    .contacto-page .contenido-hero p {
-        max-width: 50vw;
-    }
-}
-
-@media (max-width: 1024px) {
-    .contacto-page .contenido-hero {
-        top: 40vh;
-    }
-}
-
 @media (max-width: 780px) {
-    .contacto-page .contenido-hero {
-        top: 30vh;
-    }
-
-    .contacto-page .boton {
-        margin-bottom: 2vh;
-    }
-
-    .contacto-page .botones {
-        flex-direction: column;
-        align-items: center;
+    .contacto-page .hero {
+        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
+        background-position: 0% 28%; /* Empieza desde la esquina superior izquierda */
+        height: 88vh;
     }
 }
 
