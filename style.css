@@ -106,19 +106,26 @@ p {
     
 }
 
+.botones {
+    display: flex;
+    flex-wrap: wrap;  /* Esto permite que los botones se ajusten automáticamente a la siguiente línea si es necesario */
+    gap: 1.5vw;  /* Añadí un espacio entre los botones */
+}
+
 .boton {
     margin-top: 0;
-    margin-right: 2vw;
+    margin-right: 1.5vw;
     background-color: var(--rojo);
     color: var(--blanco);
-    padding: 2.5vh 3vw;
+    padding: 2vh 2vw;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 2.2vh;
+    font-size: 2vh;
     border-radius: 50px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
+    width: fit-content;
 }
 
 /* Efecto hover en botones */
@@ -481,7 +488,7 @@ a {
     margin-bottom: 3vh;
 }
 
-.container-contacto p {
+#ContenidoDelContacto {
     margin-bottom: 3vh;
 }
 
@@ -491,10 +498,10 @@ a {
 .contenido_contacto {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin-bottom: 3vh;
     opacity: 0;
     transform: translateX(-2vw);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out; /* Modificación 3: 0.7s */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .contenido_contacto.in-view {
@@ -507,7 +514,7 @@ a {
 /* ============================== */
 #mapa {
     flex: 1.5;
-    height: 75vh;
+    height: 60vh;
 }
 
 #mapa iframe {
@@ -559,12 +566,13 @@ a {
 /*        HERO SECTION            */
 /* ============================== */
 
+
 .index-page .hero {
     background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/inicio01.jpg');
     background-repeat: no-repeat;
     background-size: 120% auto; /* Usa el 100% del ancho y alto de la imagen */
-    background-position: 0% 28%; /* Empieza desde la esquina superior izquierda */
+    background-position: 0% 28%;
     height: 100vh;
     position: relative;
     display: flex;
@@ -572,10 +580,35 @@ a {
     align-items: center;
 }
 
+/* Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    .index-page .hero {
+        height: 90vh;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/* Ajuste para tabletas */
+@media (max-width: 768px) {
+    .index-page .hero {
+        background-size: cover;
+        background-position: center top; /* Prioriza la parte superior */
+    }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 425px) {
+    .index-page .hero {
+        background-size: cover;
+        background-position: center top; /* Asegura que la parte superior esté visible */
+    }
+}
+
 /* Contenido dentro del hero */
 .contenido-hero {
     position: absolute;
-    top: 50vh;
+    top: 45vh;
     left: 5vw;
     text-align: left;
     color: var(--blanco);
@@ -587,7 +620,12 @@ a {
 
 .hero .contenido-hero p {
     margin-bottom: 6.5vh;
-    max-width: 70vh;
+}
+
+@media (min-width: 769px) {
+    .contenido-hero {
+        max-width: 50vw;
+    }
 }
 
 /* ============================== */
@@ -642,7 +680,7 @@ a {
 @media (max-width: 1024px) {
     .contenido-hero {
         position: absolute;
-        top: 45vh;
+        top: 30vh;
         left: 5vw;
         text-align: left;
         color: var(--blanco);
@@ -675,8 +713,8 @@ a {
         flex: 0 0 auto;
         width: 100%;
         transform: translateY(50px);
-        background-size: 120% auto; /* Zoom: Ancho, Alto */
-        background-position: 37% 70%; /* Posición: Izquierda, Arriba */
+        background-size: 120% auto;
+        background-position: 37% 70%;
         height: 60vh;
         opacity: 0;
         transition: opacity 1s ease-out, transform 1s ease-out;
@@ -689,11 +727,51 @@ a {
 }
 
 @media (max-width: 768px) {
-    .index-page .hero {
-        background-repeat: no-repeat;
-        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
-        background-position: 0% 28%; /* Empieza desde la esquina superior izquierda */
-        height: 88vh;
+    .contenido-hero {
+        position: absolute;
+        top: 35vh;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: var(--blanco);
+        width: 85%;
+    }
+
+    .contenido-hero h1,
+    .contenido-hero p {
+        margin: 0 auto;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contenido-hero {
+        position: absolute;
+        top: 30vh;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: var(--blanco);
+        width: 90%;
+    }
+
+    .contenido-hero h1,
+    .contenido-hero p {
+        margin: 0 auto;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
     }
 }
 
@@ -838,8 +916,8 @@ a {
 .servicios-page .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/servicios01.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto; /* Usa el 100% del ancho y alto de la imagen */
-    background-position: 0% 40%; /* Empieza desde la esquina superior izquierda */
+    background-size: cover;
+    background-position: center center;
     height: 100vh;
     position: relative;
     display: flex;
@@ -847,11 +925,28 @@ a {
     align-items: center;
 }
 
-@media (max-width: 780px) {
-    .servicios-page  .hero {
-        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
-        background-position: 0% 1%; /* Empieza desde la esquina superior izquierda */
-        height: 88vh;
+/* Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    .servicios-page .hero {
+        height: 90vh;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/* Ajuste para tabletas */
+@media (max-width: 768px) {
+    .servicios-page .hero {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 425px) {
+    .servicios-page .hero {
+        background-size: cover;
+        background-position: center top;
     }
 }
 
@@ -1043,16 +1138,16 @@ a {
 /* Media Queries para responsive design */
 @media (max-width: 1024px) {
     .servicios-page .info-box {
-        width: calc(100% - 40vw);
+        width: calc(100% - 45vw);
     }
-    .servicios-page .info-box1 { top: 15%; }
-    .servicios-page .info-box2 { top: 27%; }
+    .servicios-page .info-box1 { top: 18%; }
+    .servicios-page .info-box2 { top: 26%; }
     .servicios-page .white-space1,
     .servicios-page .white-space3,
     .servicios-page .white-space4 {
-        height: 50vh;
+        height: 30vh;
     }
-    .servicios-page .info-box3 { top: 65%; }
+    .servicios-page .info-box3 { top: 67%; }
     .servicios-page .info-box4 { top: 78%; }
 }
 
@@ -1063,7 +1158,7 @@ a {
     }
 
     .servicios-page .featured-image-div {
-        height: 50vh; /* Reducimos altura para pantallas medianas */
+        height: 50vh;
     }
 
     .servicios-page .info-box {
@@ -1080,7 +1175,6 @@ a {
         right: auto;
     }
 
-    /* Reordenamos los elementos con 'order' */
     .servicios-page .featured-image-div1 { order: 1; }
     .servicios-page .info-box1 { order: 2; }
     .servicios-page .white-space1 { order: 3; }
@@ -1094,16 +1188,15 @@ a {
     .servicios-page .info-box4 { order: 11; }
     .servicios-page .white-space4 { order: 12; }
 
-    /* Tamaño uniforme para todos los white-space */
     .servicios-page .white-space1,
     .servicios-page .white-space3,
     .servicios-page .white-space4 {
-        height: 15vh;
+        height: 20vh;
         background-color: var(--blanco);
     }
 
     .servicios-page .info-box {
-        margin-top: -10vh;
+        margin-top: -15vh;
     }
 }
 
@@ -1126,6 +1219,7 @@ a {
 /*          HERO SECTION          */
 /* ============================== */
 .sobre-nosotros-page .hero {
+    background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/nosotros01.jpg');
     background-repeat: no-repeat;
     background-size: 120% auto; /* Usa el 100% del ancho y alto de la imagen */
@@ -1137,12 +1231,28 @@ a {
     align-items: center;
 }
 
+/* Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    .sobre-nosotros-page .hero {
+        height: 90vh;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/* Ajuste para tabletas */
 @media (max-width: 768px) {
     .sobre-nosotros-page .hero {
-        background-repeat: no-repeat;
-        background-size: 135% auto; /* Usa el 100% del ancho y alto de la imagen */
-        background-position: 38% 100%; /* Empieza desde la esquina superior izquierda */
-        height: 88vh;
+        background-size: cover;
+        background-position: center top; /* Prioriza la parte superior */
+    }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 425px) {
+    .sobre-nosotros-page .hero {
+        background-size: cover;
+        background-position: center top; /* Asegura que la parte superior esté visible */
     }
 }
 
@@ -1198,21 +1308,29 @@ a {
 
 @media (max-width: 768px) {
     .sobre-nosotros-page .estadisticas {
-        flex-direction: column;
-        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5vh 5vw;
     }
 
     .sobre-nosotros-page .circulo {
-        width: 45vw;
-        height: 45vw;
-        margin: 5vh 0;
+        width: 25vw;
+        height: 25vw;
+        margin: 2vh 1vw;
     }
 }
 
 @media (max-width: 425px) {
+    .sobre-nosotros-page .estadisticas {
+        flex-direction: column;
+        padding: 5vh 5vw;
+        height: auto; 
+    }
+
     .sobre-nosotros-page .circulo {
-        width: 62vw;
-        height: 62vw;
+        width: 50vw;
+        height: 50vw;
+        margin: 3vh 0;
     }
 }
 
@@ -1261,8 +1379,12 @@ a {
         width: calc(100% - 45vw);
     }
 
+    .sobre-nosotros-page .sobre-nosotros-featured .info-box.right-aligned {
+        bottom: 25vh;
+    }
+
     .sobre-nosotros-page .sobre-nosotros-featured .white-space {
-        height: 40vh;
+        height: 30vh;
     }
 }
 
@@ -1274,7 +1396,7 @@ a {
     }
 
     .sobre-nosotros-page .featured-image-div {
-        height: 50vh; /* Reducimos altura para pantallas medianas */
+        height: 50vh;
         width: 100%;
     }
 
@@ -1303,13 +1425,13 @@ a {
 /* Responsive para pantallas ≤ 425px */
 @media (max-width: 425px) {
     .sobre-nosotros-page .featured-image-div {
-        height: 40vh; /* Más pequeña en móviles */
+        height: 50vh; /* Más pequeña en móviles */
         width: 100%;
     }
 
     .sobre-nosotros-page .sobre-nosotros-featured .info-box {
         width: 90%;
-        margin-top: -10vh;
+        margin-top: -20vh;
         transform: translateY(50px);
         opacity: 0;
     }
@@ -1405,15 +1527,64 @@ a {
     }
 }
 
+@media (max-width: 425px) {
+    .sobre-nosotros-page .nosotros-container {
+        padding: 5vh 5vw;
+    }
+
+    .sobre-nosotros-page .nosotros-content {
+        flex-direction: column;
+        gap: 3vh;
+        align-items: center;
+    }
+
+    .sobre-nosotros-page .text-box {
+        flex-basis: 100%;
+        max-width: 90%;
+        align-items: flex-start;
+    }
+
+    .sobre-nosotros-page .icon-wrapper {
+        width: 3.5vh;
+        height: 3.5vh;
+        margin-right: 2vw;
+        margin-top: 1vh;
+    }
+
+    .sobre-nosotros-page .icon-wrapper svg {
+        width: 70%;
+        height: 70%;
+    }
+}
+
 .sobre-nosotros-page .nosotros3 {
     width: 100%;
     height: 115vh;
     background-image: url('img/nosotros03.jpg');
-    background-size: 100% auto; /* Usa el 100% del ancho y alto de la imagen */
-    background-position: 50% 0%; /* Empieza desde la esquina superior izquierda */
+    background-size: 100% auto;
+    background-position: 50% 0%;
     background-repeat: no-repeat;
     display: block;
 }
+
+@media (max-width: 1024px) {
+    .sobre-nosotros-page .nosotros3 {
+        height: 80vh;
+    }
+    
+}
+@media (max-width: 768px) {
+    .sobre-nosotros-page .nosotros3 {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .sobre-nosotros-page .nosotros3 {
+        height: 35vh;
+    }
+}
+
 
 /* ============================== */
 /*       CONTACT PAGE STYLES      */
@@ -1423,6 +1594,7 @@ a {
 /*        HERO SECTION            */
 /* ============================== */
 .contacto-page .hero {
+    background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/contacto01.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto; /* Usa el 100% del ancho y alto de la imagen */
@@ -1434,25 +1606,27 @@ a {
     align-items: center;
 }
 
-@media (max-width: 780px) {
-    .contacto-page .hero {
-        background-size: 125% auto; /* Usa el 100% del ancho y alto de la imagen */
-        background-position: 0% 28%; /* Empieza desde la esquina superior izquierda */
-        height: 88vh;
+/* Ajuste para pantallas medianas */
+@media (max-width: 1024px) {
+    .contacto-page.hero {
+        height: 90vh;
+        background-size: cover;
+        background-position: center center;
     }
 }
 
+/* Ajuste para tabletas */
+@media (max-width: 768px) {
+    .contacto-page .hero {
+        background-size: cover;
+        background-position: center top; /* Prioriza la parte superior */
+    }
+}
+
+/* Ajuste para móviles pequeños */
 @media (max-width: 425px) {
-    .contacto-page .contenido-hero {
-        top: 25vh;
-    }
-
-    .contacto-page .boton {
-        margin-bottom: 2vh;
-    }
-
-    .contacto-page .botones {
-        flex-direction: column;
-        align-items: center;
+    .contacto-page .hero {
+        background-size: cover;
+        background-position: center top; /* Asegura que la parte superior esté visible */
     }
 }
