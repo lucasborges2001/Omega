@@ -1076,9 +1076,9 @@ a {
 }
 
 .servicios-page .featured-image-div4 {
-    background-image: url('img/servicios05.jpg');
+    background-image: url('img/servicios06.jpg');
     background-size: 100% auto; /* Usa el 100% del ancho y alto de la imagen */
-    background-position: 0% 100%; /* Empieza desde la esquina superior izquierda */
+    background-position: 70% 30%; /* Empieza desde la esquina superior izquierda */
 }
 
 .servicios-page .info-box {
@@ -1129,26 +1129,34 @@ a {
     background-color: var(--blanco);
 }
 
-/* No definiste white-space4 en el CSS original, lo añado */
-.servicios-page .white-space4 {
-    height: 50vh; /* Ajustá según necesites */
-    background-color: var(--blanco);
-}
-
-/* Media Queries para responsive design */
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     .servicios-page .info-box {
         width: calc(100% - 45vw);
     }
     .servicios-page .info-box1 { top: 18%; }
-    .servicios-page .info-box2 { top: 26%; }
+    .servicios-page .info-box2 { top: 25.7%; }
+    
     .servicios-page .white-space1,
-    .servicios-page .white-space3,
-    .servicios-page .white-space4 {
+    .servicios-page .white-space3{
         height: 30vh;
     }
-    .servicios-page .info-box3 { top: 67%; }
-    .servicios-page .info-box4 { top: 78%; }
+    .servicios-page .info-box3 { top: 67.5%; }
+    .servicios-page .info-box4 { top: 75.5%; }
+}
+
+@media (max-width: 1024px) {
+    .servicios-page .info-box {
+        width: calc(100% - 45vw);
+    }
+    .servicios-page .info-box1 { top: 16.5%; }
+    .servicios-page .info-box2 { top: 29%; }
+    
+    .servicios-page .white-space1,
+    .servicios-page .white-space3{
+        height: 30vh;
+    }
+    .servicios-page .info-box3 { top: 62%; }
+    .servicios-page .info-box4 { top: 75%; }
 }
 
 @media (max-width: 768px) {
